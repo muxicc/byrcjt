@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class User implements Serializable {
     private int id;
     private String name;
-    private Integer age;
+    private int age;
 
     public User() {
     }
@@ -37,7 +37,7 @@ public class User implements Serializable {
         return age;
     }
 
-    public void setAge(String sex) {
+    public void setAge(int age) {
         this.age = age;
     }
 }
