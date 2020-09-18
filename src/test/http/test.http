@@ -6,11 +6,11 @@ content-type:application/json
 }
 
 ###删除
-GET http://localhost:8080/user/del
+GET http://localhost:8083/byrcjt/user/del
 content-type:application/json;charset=UTF-8
 
 {
-  "id":5
+  "id":0
 }
 
 ###添加
@@ -19,7 +19,7 @@ content-type:application/json
 
 {
   "id":"1",
-  "name": "nfjb",
+  "name": "赵八",
   "age": "18"
 }
 

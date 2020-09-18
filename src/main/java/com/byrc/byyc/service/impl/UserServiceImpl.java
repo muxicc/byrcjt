@@ -30,4 +30,8 @@ public class UserServiceImpl implements UserService {
     public void add(User user) {
         userMapper.insert(user);
     }
+
+    public void update(User user){
+        userMapper.updateById(user);
+    }
 }

@@ -3,17 +3,13 @@ package com.byrc.byyc.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.byrc.byyc.model.User;
 import com.byrc.byyc.service.UserService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 
-@Controller
+@RestController
 @RequestMapping("user")
 public class UserController {
 
@@ -22,11 +18,8 @@ public class UserController {
 
     @GetMapping("findAll")
     @ResponseBody
-    List<User> user(@RequestBody String strJson) {
-        System.out.println("=============================================");
-        List<User> userList = null;
-        userList = userService.queryUser();
-        return userList;
+    List<User> user() {
+        return userService.queryUser();
     }
 
     @RequestMapping("del")
